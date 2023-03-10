@@ -1,14 +1,14 @@
 const inputText = document.querySelector('.inputTag');
 const tasks = document.querySelector('.tasks');
 const addBtn = document.querySelector('.addTask');
-const demoBtn = document.querySelector('.demo');
+const demoBtn = document.querySelector('.clearBtn');
 var ids = [];
 var id = 0;
 
 
 demoBtn.addEventListener('click', () => {
     localStorage.clear();
-    localStorage.setItem('id', 8051);
+    localStorage.setItem('id', 8050);
     location.reload();
 })
 
