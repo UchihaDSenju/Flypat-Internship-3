@@ -1,6 +1,10 @@
 const inputText = document.querySelector('.inputTag');
 const tasks = document.querySelector('.tasks');
 const addBtn = document.querySelector('.addTask');
+if(!localStorage['id']){
+    localStorage.setItem('id', 8051);
+}
+var id = parseInt(localStorage['id']);
 
 inputText.addEventListener('keyup', (e) => {
     if(e.key == 'Enter'){
@@ -26,6 +30,9 @@ addBtn.addEventListener('click', () => {
 // Add Function
 const addItem = (item) => {
     const listItem = document.createElement('li');
+    listItem.id = id;
+    id += 1;
+    localStorage.setItem('id', id);
     listItem.className = 'task';
     listItem.innerHTML = `
     <span>${item}</span>
@@ -37,6 +44,7 @@ const addItem = (item) => {
     })
 
     listItem.querySelector('i').addEventListener('click', () => {
+        console.log(listItem.id);
         listItem.remove();
     })
     tasks.appendChild(listItem);
