@@ -58,7 +58,7 @@ const addItem = (item) => {
     localStorage.setItem('id', id);
     listItem.className = 'task';
     listItem.innerHTML = `
-    <span>${item}</span>
+    <span class="content">${item}</span>
     <i class="far fa-trash-alt"></i>
     `;
     ids.push(id)

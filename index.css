@@ -83,6 +83,9 @@ button{
     border-radius: 2px;
 
 }
+span{
+    overflow: auto;
+}
 
 @media(max-width: 700px){
     .container{
