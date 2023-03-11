@@ -29,7 +29,7 @@ for(var i = 0; i < ids.length; i++){
 
 inputText.addEventListener('keyup', (e) => {
     if(e.key == 'Enter'){
-        if(inputText.value == ''){
+        if(inputText.value == '' || inputText.value.trim() === ""){
             alert('Enter a To-Do activity');
         }
         else{
@@ -41,7 +41,7 @@ inputText.addEventListener('keyup', (e) => {
 })
 
 addBtn.addEventListener('click', () => {
-    if(inputText.value == ''){
+    if(inputText.value == '' || inputText.value.trim() === ""){
         alert('Enter a To-Do activity');
     }
     else{
